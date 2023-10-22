@@ -4,7 +4,7 @@ try
 
     $con = new PDO("Строка подключения к бд");
     $k = $con->query('select "dp"."Id" as "parent_id","dp"."DirName" as "parent", "dc"."Id" as "child_id",  "dc"."DirName" as "child" from "public"."Directories" as "dp"
-    Right join "public"."Directories" as "dc" on "dc"."Parent_Id" = "dp"."Id"'
+    right join "public"."Directories" as "dc" on "dc"."Parent_Id" = "dp"."Id"'
     );
     $temp = $k->fetchAll();
     foreach($temp as $value)
